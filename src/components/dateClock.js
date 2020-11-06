@@ -7,22 +7,39 @@ export default function DateClock(){
 
 
     return(
+        
+         <DateTimeBlock />
+        
+    )
+}
+
+
+
+
+function DateTimeBlock(){
+
+    return(
         <div>
-            <h1>pp</h1>
-            {/* <TimeBlock /> */}
+            <DateBlock />
+            <TimeBlock />
         </div>
     )
 }
 
-// function TimeBlock(){
-//     const y = new Date().getFullYear();
-//     const m = new Date().getMonth();
-//     const d = new Date().getDay();
+function DateBlock(){
+    const d = new Date().getDate();
+    const m = new Date().getMonth() + 1;
+    const y = new Date().getFullYear();
     
-//     const date = `${m}/${d}/${y} `
-//     return(
-//         <div>
-//             <h1>{date}</h1>
-//         </div>
-//     )
-// }
+    const date = `${m}/${d}/${y} `
+    return(
+        <h1>{date}</h1>
+    )
+}
+
+function TimeBlock(){
+    const day = new Date()
+    return (
+        <h2>{day.getHours()} : {day.getMinutes()}</h2>
+    )
+}
