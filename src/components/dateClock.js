@@ -38,8 +38,18 @@ function DateBlock(){
 }
 
 function TimeBlock(){
-    const day = new Date()
+    let time = new Date().toLocaleTimeString();
+
+    const [Ctime, setCtime] = useState(time)
+
+    const updateTime = () => {
+        time = new Date().toLocaleTimeString();
+        setCtime(time)
+    }
+
+    setInterval(updateTime, 1000)
+
     return (
-        <h2>{day.getHours()} : {day.getMinutes()}</h2>
+        <h2>{time}</h2>
     )
 }
