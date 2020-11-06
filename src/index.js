@@ -1,10 +1,17 @@
-import React from "react";
+import React from 'react'
 import ReactDOM from "react-dom";
-import "./index.css";
 import App from "./App";
-import Server from './server'
+import { ThemeProvider } from "styled-components";
+
+import theme from "./theme";
 
 
-console.log(Server)
+import "./index.css";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+
+ReactDOM.render(
+    <ThemeProvider theme={theme}>
+        <App />
+    </ThemeProvider>, 
+    document.getElementById("root")
+);
