@@ -6,7 +6,7 @@ import "./App.css";
 import axios from "axios";
 
 const api = '0avHIUOCDyO6rN1DkHeZyEFkaO2LSLwPMewn3Bbb'
-// const default = '&date=2020-11-04'
+const defaultKey = `?api_key=${api}&date=2020-07-12`
 
 function App() {
 
@@ -14,7 +14,7 @@ function App() {
   const [data, setData] = useState([])
 
   useEffect( () => {
-      axios.get(`https://api.nasa.gov/planetary/apod?api_key=${api}&date=2020-07-12`)
+      axios.get(`https://api.nasa.gov/planetary/apod?api_key=${api}`?  `https://api.nasa.gov/planetary/apod${defaultKey}` :  `https://api.nasa.gov/planetary/apod?api_key=${api}`)
           .then(response => {
               console.log(response)
               setData(response.data)

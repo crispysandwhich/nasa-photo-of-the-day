@@ -17,3 +17,71 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+/* footer */
+/* ========= gadgets ========= */
+.gadget,.social{
+  flex-basis: 25%;
+}
+
+.gadget{
+  background-color: rgba(0,0,0,.2);
+  border: 1px solid greenyellow;
+  height: 90px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  box-shadow: 0 0 50px 10px rgba(255,255,255,.1);
+
+}
+.gadgetB{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: royalblue;
+}
+
+.content{
+  flex-basis: 50%;
+}
+/* ============ content ========= */
+.content h2{
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+.content p{
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.content h6 a{
+  color: inherit;
+  text-decoration: none
+}
+.content h6 a:hover{
+  color: crimson;
+}
+/* ============ social ========= */
+
+.social{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
+}
+.social li{
+  font-size: 1.7rem;
+  padding: 12px;
+  width: 60px;
+  text-align: center;
+  background-color: crimson;
+  border-radius: 50%;
+  transition: all 300ms ease-in-out;
+}
+.social li a{
+  color: inherit;
+}
+.social li:hover{
+  background-color: royalblue;
+}

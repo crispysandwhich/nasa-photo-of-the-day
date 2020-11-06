@@ -13,6 +13,7 @@ const StyleHero = style.div`
     align-items: center;
     color: #fff;
     position: relative;
+    box-shadow: inset 0px 0px 60px 20px rgba(0,0,0,.5);
 
     &::before{
         content: '';
@@ -29,9 +30,9 @@ const StyleHero = style.div`
         color: #FFF;
         position: relative;
         z-index: 2;
-        border: 1px solid #fff;
+        text-shadow: 5px 30px rgba(0,0,0,.9)
         padding: 5px;
-        background-color: black;
+        
     }
     div h1{
         font-size: 5rem;
