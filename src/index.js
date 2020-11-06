@@ -1,6 +1,18 @@
-import React from "react";
+import React from 'react'
 import ReactDOM from "react-dom";
-import "./index.css";
 import App from "./App";
+import { ThemeProvider } from "styled-components";
+import './components/fontawesome'
 
-ReactDOM.render(<App />, document.getElementById("root"));
+import theme from "./theme";
+
+
+import "./index.css";
+
+
+ReactDOM.render(
+    <ThemeProvider theme={theme}>
+        <App />
+    </ThemeProvider>, 
+    document.getElementById("root")
+);
