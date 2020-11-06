@@ -2,11 +2,11 @@ import React,{useEffect , useState} from 'react'
 import  Hero  from './Hero'
 import FooterBabe from './components/footer';
 import "./App.css";
+import {api,defaultKey} from './static'
 
 import axios from "axios";
 
-const api = '0avHIUOCDyO6rN1DkHeZyEFkaO2LSLwPMewn3Bbb'
-const defaultKey = `?api_key=${api}&date=2020-07-12`
+
 
 function App() {
 
@@ -43,7 +43,7 @@ function App() {
   return (
     <div className="App">
       <Hero image={data.hdurl} />
-      <FooterBabe title={data.title} />
+      <FooterBabe title={data.title} explanation={data.explanation}/>
     </div>
   );
 }

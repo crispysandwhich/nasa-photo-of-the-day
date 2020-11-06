@@ -30,16 +30,14 @@ const StyleFooter = style.div`
 
 export default function FooterBabe(props){
 
-    const title  = props.title;
+    const {title, explanation}  = props;
 
 
     return(
         <StyleFooter>
             <footer>
                 <div className="gadget">
-                        <div className="gadgetB"></div>
-                        <div className="gadgetB"></div>
-                        <div className="gadgetB"></div>
+                        <p>{explanation}</p>
                 </div>
                 <div className="content">
                     <h2>NASA API</h2>
