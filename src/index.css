@@ -85,3 +85,19 @@ code {
 .social li:hover{
   background-color: royalblue;
 }
+@media(max-width: 414px){
+  footer{
+    flex-direction: column;
+  }
+  .content{
+    order: 1;
+    margin-bottom: 20px;
+  }
+  .social{
+    order: 3;
+  }
+  .gadget{
+    order: 2;
+    margin-bottom: 20px;
+  }
+}
